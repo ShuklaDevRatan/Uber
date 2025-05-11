@@ -79,6 +79,9 @@ captionSchema.methods.comparePassword = async function (password) {
 captionSchema.statics.hashPassword = async function (password) {
     return await bcrypt.hash(password, 10);
 }
+captionSchema.statics.verifyToken = async function (token) {
+    return await jwt.verify(token, config.JWT_SECRET)
+}
 
 const captionModel = mongoose.model('caption', captionSchema);
 export default captionModel;

@@ -41,7 +41,7 @@ export const loginUserController = async (req, res) => {
         if (!isMatch) {
             return res.status(404).json({ message: "Invalid Email Or Password" })
         }
-        const token = user.genrateAuthToken();
+        const token =await user.genrateAuthToken();
         delete user._doc.password;
         res.status(201).json({ token, user });
     } catch (error) {
