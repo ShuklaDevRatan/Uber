@@ -5,6 +5,7 @@ import UserLogin from './pages/UserLogin';
 import UserSignup from './pages/UserSignup';
 import CaptionLogin from './pages/CaptionLogin';
 import CaptionSignup from './pages/CaptionSignup';
+import {UserDataContext} from './context/UserContext';
 
 const App = () => {
   return (
