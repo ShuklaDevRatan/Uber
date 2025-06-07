@@ -9,6 +9,7 @@ import CaptionLogin from './pages/CaptionLogin';
 import CaptionSignup from './pages/CaptionSignup';
 import { UserDataContext } from './context/UserContext';
 import UserProtectWrapper from './pages/UserProtectWrapper';
+import CaptionHome from './pages/CaptionHome';
 
 const App = () => {
   return (
@@ -26,9 +27,10 @@ const App = () => {
         } />
         <Route path='/user/logout' element={
           <UserProtectWrapper>
-            <UserLogout/>
+            <UserLogout />
           </UserProtectWrapper>
-        }/>
+        } />
+        <Route path='/caption-home' element={<CaptionHome />} />
       </Routes>
     </div>
   )

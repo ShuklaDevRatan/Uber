@@ -12,7 +12,7 @@ app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 
 app.use('/users',userRoutes)
-app.use('/caption',captionRoutes)
+app.use('/captions',captionRoutes)
 
 
 export default app;
