@@ -19,7 +19,6 @@ const CaptionSignup = () => {
   const [vehicleType, setVehicleType] = useState('')
 
 
-  const { caption, setCaption } = React.useContext(CaptionDataContext)
 
 
   const submitHandler = async (e) => {

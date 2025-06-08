@@ -10,6 +10,8 @@ import CaptionSignup from './pages/CaptionSignup';
 import { UserDataContext } from './context/UserContext';
 import UserProtectWrapper from './pages/UserProtectWrapper';
 import CaptionHome from './pages/CaptionHome';
+import CaptionProtectWrapper from './pages/CaptionProtectWrapper';
+import CaptionLogout from './pages/CaptionLogout';
 
 const App = () => {
   return (
@@ -30,7 +32,16 @@ const App = () => {
             <UserLogout />
           </UserProtectWrapper>
         } />
-        <Route path='/caption-home' element={<CaptionHome />} />
+        <Route path='/caption-home' element={
+          <CaptionProtectWrapper>
+            <CaptionHome />
+          </CaptionProtectWrapper>
+        } />
+        <Route path='/caption/logout' element={
+          <CaptionProtectWrapper>
+            <CaptionLogout />
+          </CaptionProtectWrapper>
+        } />
       </Routes>
     </div>
   )
