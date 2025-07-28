@@ -1,4 +1,3 @@
-
 import React, { useContext, useEffect, useState } from 'react'
 import { UserDataContext } from '../context/UserContext'
 import { useNavigate } from 'react-router-dom'
@@ -22,7 +21,7 @@ const UserProtectWrapper = ({
                 Authorization: `Bearer ${token}`
             }
         }).then(response => {
-            if (response.status === 200) {
+            if (response.status === 201) {
                 setUser(response.data)
                 setIsLoading(false)
             }
